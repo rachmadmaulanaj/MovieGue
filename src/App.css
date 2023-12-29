@@ -1,0 +1,162 @@
+:root {
+    --color-black: #232931;
+    --color-grey: #393E46;
+    --color-teal: #4ECCA3;
+    --color-white: #EEEEEE;
+}
+
+body {
+    background-color: var(--color-grey) !important;
+}
+
+a { text-decoration: none!important; }
+a:hover { text-decoration: underline!important; }
+
+/* Untuk Webkit (Chrome, Safari, Opera) */
+::-webkit-scrollbar { height: 10px; width: 10px; }
+::-webkit-scrollbar-track { background-color: #f1f1f1; }
+::-webkit-scrollbar-thumb { background-color: #888; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background-color: #555; }
+
+.text-black { color: var(--color-black) !important; }
+.text-grey { color: var(--color-grey) !important; }
+.text-teal { color: var(--color-teal) !important; }
+.text-white { color: var(--color-white) !important; }
+.bg-teal { background-color: var(--color-teal) !important; }
+.bg-white { background-color: var(--color-white) !important; }
+
+.btn-scroll-up {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.input-search{
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.input-search:focus { outline: unset; }
+.input-search-icon {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.select-custom {
+    border: none;
+    padding: 5px 10px;
+    background: var(--color-black);
+    color: var(--color-white);
+    cursor: pointer;
+}
+.select-custom:focus { outline: unset; }
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: var(--color-black)!important;
+    border-color: var(--color-black)!important;
+}
+.nav-tabs { border-bottom: 1px solid var(--color-black)!important; }
+
+.loading-block {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-list-view {
+    position: absolute;
+    width: 175px;
+    z-index: 1;
+    bottom: 15px;
+    left: 15px;
+}
+
+.card-body-list {
+    min-height: 200px;
+    margin-left: 210px;
+}
+.card-spacing {
+    margin-top: 100px!important;
+    margin-bottom: 15px!important;
+}
+
+.div-detail-view {
+    position: absolute;
+    display: flex;
+    top: 370px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.div-detail-info-view { width: 800px; }
+
+.div-backdrop {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.div-backdrop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFF50;
+    z-index: 1;
+}
+.div-detail-view-poster { width: 250px; }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #carouselPhoto .slide { min-width: 90%!important; }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #carouselPhoto .slide { min-width: 50%!important; }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #carouselPhoto .slide { min-width: 30%!important; }
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .div-detail-info-view { padding-left: 1rem; }
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    
+}
+
+@media (max-width: 576px) {
+    .div-input-search { width: 100%; }
+    .input-search { width: 100%; }
+    .input-search-icon { top: 70%; }
+    .img-list-view { top: 15px; width: 125px!important; }
+    .card-body-list { margin-left: 140px!important; }
+    #carouselPhoto .slide { min-width: 90%!important; }
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 992px) {
+    .card-body-list { min-height: 300px; }
+    .card-spacing { margin-top: 15px!important; }
+}
+@media (max-width: 1200px) {
+    .div-detail-info-view-title { color: var(--color-white); }
+    .div-detail-info-view-title h3 { color: var(--color-teal); }
+    .div-detail-view { display: block; width: 100%; top: 200px; }
+    .div-detail-info-view { width: 100%; }
+    .div-lg-hide { display: none; }
+    .div-detail-view-poster { margin-left: auto; margin-right: auto; width: 200px; }
+    .div-backdrop { height: 350px; }
+}
+@media (max-width: 1400px) {
+}
