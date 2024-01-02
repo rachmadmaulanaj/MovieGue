@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
+    const link_detail = '/';
+    // const link_detail = '/moviegue';
     return (
         <nav className="navbar">
             <div className="container">
-                <Link to="/">
+                <Link to={link_detail}>
                     <span className="navbar-brand text-teal fw-bold fs-2">MovieGue</span>
                 </Link>
                 {
@@ -22,7 +24,7 @@ const Header = (props) => {
                             </div>
                         </div>
                     ) : (
-                        <Link to="/">
+                        <Link to={link_detail}>
                             <div className='text-teal'>
                                 <i className='fa fa-arrow-left'></i>
                                 <span className='ms-2'>Back to list</span>

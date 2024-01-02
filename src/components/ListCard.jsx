@@ -9,6 +9,7 @@ import { viewDetailMovie } from '../redux/slice/detailSlice';
 
 const ListCard = (props) => {
     const poster = props.movie.poster_path ? 'https://image.tmdb.org/t/p/w185/' + props.movie.poster_path : NoImageMovie;
+    // const poster = props.movie.poster_path ? 'https://image.tmdb.org/t/p/w185/' + props.movie.poster_path : window.location.href + '/assets/no-image-movie.png';
     const card_image = {
         backgroundImage: `url(${poster})`,
         WebkitMaskImage: `linear-gradient(transparent, ${'var(--color-grey)'} 20%, ${'var(--color-black) 80%'}, transparent)`,
@@ -31,6 +32,8 @@ const ListCard = (props) => {
             .replace(/--+/g, '-') // Ganti dua tanda hubung berturut-turut dengan satu tanda hubung
             .trim(); // Hapus spasi di awal dan akhir
     }
+    const link_detail = '/detail/' + createSlug(props.movie.title);
+    // const link_detail = '/moviegue/detail/' + createSlug(props.movie.title);
 
     const addDataInViewDetail = (event) => {
         const element = event.target.parentNode;
@@ -60,13 +63,13 @@ const ListCard = (props) => {
                             boxShadow: '0 .5rem 1rem rgba(0,0,0,.5)'
                         }}>
                             <div style={card_image}></div>
-                            <Link to={'/detail/' + createSlug(props.movie.title)}>
+                            <Link to={link_detail}>
                                 <button className='btn btn-sm bg-teal text-light position-absolute' style={{ top: '10px', right: '10px' }} onClick={addDataInViewDetail} data-bs-toggle='tooltip' data-bs-placement='left' title='View Detail'>
                                     <i className='fa fa-sm fa-info-circle'></i>
                                 </button>
                             </Link>
                             <div className='card-body text-white'>
-                                <Link to={'/detail/' + createSlug(props.movie.title)}>
+                                <Link to={link_detail}>
                                     <span className='h5 text-white' onClick={addDataInViewDetail}>{props.movie.title}</span>
                                 </Link>
                                 <p style={{ fontSize: '.70rem', color: 'var(--color-teal)' }}>
@@ -95,10 +98,10 @@ const ListCard = (props) => {
                             <img src={poster} alt={props.movie.title} className='rounded img-list-view'/>
                             <div className='card-body card-body-list text-white'>
                                 <div className='d-flex justify-content-between'>
-                                    <Link to={'/detail/' + createSlug(props.movie.title)}>
+                                    <Link to={link_detail}>
                                         <span className='h3 text-white' onClick={addDataInViewDetail}>{props.movie.title}</span>
                                     </Link>
-                                    <Link to={'/detail/' + createSlug(props.movie.title)}>
+                                    <Link to={link_detail}>
                                         <button className='btn btn-sm bg-teal text-light' style={{ height: 'fit-content' }} onClick={addDataInViewDetail}>
                                             <i className='fa fa-sm fa-info-circle'></i>
                                             <span className='d-lg-inline-block d-none ms-1'>View Detail</span>

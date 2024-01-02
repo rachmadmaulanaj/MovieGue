@@ -30,3 +30,11 @@ Aturan Penulisan
 	- event name format = on + nama aksi + nama event
 	- function name format = handle + nama aksi + nama event
 */
+
+/*
+Setting tambahan jika pakai path moviegue
+- atur link ditambahi '/moviegue'
+- ganti link NoImage jadi link static / tidak pakai import
+- hapus url assets di css saat sudah di build
+- ganti link url css dan js menjadi './assets/'
+*/

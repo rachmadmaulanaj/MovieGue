@@ -105,6 +105,7 @@ class ViewDetail extends React.Component {
         const cast = this.state.cast;
         const images_poster = this.state.images.posters;
         const videos = this.state.videos;
+        // const NoImageMovie = window.location.origin + '/moviegue/assets/no-image-movie.png';
         const poster = movie.poster_path ? 'https://image.tmdb.org/t/p/w185' + movie.poster_path : NoImageMovie;
         const backdrop = movie.backdrop_path ? 'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path : NoImageMovie;
         const movie_release_date = Moment(movie.release_date).format('DD MMM YYYY');

@@ -9,6 +9,8 @@ const RouteList = () => {
             <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/detail/:slug" component={ViewDetail} />
+                {/* <Route exact path="/moviegue" component={Home} /> */}
+                {/* <Route path="/moviegue/detail/:slug" component={ViewDetail} /> */}
             </Switch>
         </Router >
     )
