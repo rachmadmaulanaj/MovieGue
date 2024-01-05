@@ -12,7 +12,7 @@ const Header = (props) => {
                 {
                     props.isShow ? (
                         <div className="d-flex div-input-search">
-                            <input className="input-search" name="searchInput" placeholder="Search Movies..." autoComplete="off" aria-label="Search" value={props.searchInput} onChange={props.onInputChange} onKeyDown={props.onSearchEnter} />
+                            <input className="input-search" type="search" name="searchInput" placeholder="Search Movies..." autoComplete="off" aria-label="Search" value={props.searchInput} onChange={props.onInputChange} onKeyDown={props.onSearchEnter} />
                             <div onClick={props.onSearchRemoveClick} className='input-search-icon'>
                                 {
                                     props.searchInput ? (
