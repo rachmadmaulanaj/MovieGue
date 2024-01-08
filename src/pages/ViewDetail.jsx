@@ -92,6 +92,8 @@ class ViewDetail extends React.Component {
                     videos: videos.results.filter(v => v.type === "Trailer" && v.site === "YouTube").slice(0, 10),
                     isLoading: false,
                 });
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
@@ -225,14 +227,7 @@ class ViewDetail extends React.Component {
                                             </div>
                                         </div>
                                         <div className='tab-pane fade' id='pemeran'>
-                                            <div style={{
-                                                width: '100%',
-                                                height: '100%',
-                                                overflowX: 'auto',
-                                                // whiteSpace: 'nowrap',
-                                                padding: '15px',
-                                                margin: '20px 0',
-                                            }}>
+                                            <div className='div-pemeran'>
                                                 {
                                                     cast.map((val) => {
                                                         const profile = val.profile_path ? 'https://image.tmdb.org/t/p/w185' + val.profile_path : NoImageMovie;

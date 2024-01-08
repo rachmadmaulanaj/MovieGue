@@ -112,6 +112,18 @@ a:hover { text-decoration: underline!important; }
     z-index: 1;
 }
 .div-detail-view-poster { width: 250px; }
+.div-pemeran {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+#carouselVideo iframe {
+    width: 100%;
+    margin: 0;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -141,6 +153,7 @@ a:hover { text-decoration: underline!important; }
     .img-list-view { top: 15px; width: 125px!important; }
     .card-body-list { margin-left: 140px!important; }
     #carouselPhoto .slide { min-width: 90%!important; }
+    .div-pemeran { text-align: center; }
 }
 @media (max-width: 768px) {
 
