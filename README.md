@@ -30,7 +30,7 @@ Link Demo : [MovieGue](https://rachmadmaulana.000webhostapp.com/moviegue)
 > - React Responsive Carousel
 
 ### Pihak Ketiga
-> - API TMDB [The Movie Database](https://www.themoviedb.org/)
+> - API Film Internasional [The Movie Database](https://developer.themoviedb.org/reference/intro/getting-started)
 
 ### Cara Menggunakan
 > - git clone untuk mencopy ke local storage
