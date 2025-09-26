@@ -8,8 +8,7 @@ import { useDispatch } from "react-redux";
 import { viewDetailMovie } from '../redux/slice/detailSlice';
 
 const ListCard = (props) => {
-    const poster = props.movie.poster_path ? 'https://image.tmdb.org/t/p/w185/' + props.movie.poster_path : NoImageMovie;
-    // const poster = props.movie.poster_path ? 'https://image.tmdb.org/t/p/w185/' + props.movie.poster_path : window.location.href + '/assets/no-image-movie.png';
+    const poster = props.movie.poster_path ? 'https://image.tmdb.org/t/p/w342/' + props.movie.poster_path : NoImageMovie;
     const card_image = {
         backgroundImage: `url(${poster})`,
         WebkitMaskImage: `linear-gradient(transparent, ${'var(--color-grey)'} 20%, ${'var(--color-black) 80%'}, transparent)`,
@@ -33,7 +32,6 @@ const ListCard = (props) => {
             .trim(); // Hapus spasi di awal dan akhir
     }
     const link_detail = '/detail/' + createSlug(props.movie.title);
-    // const link_detail = '/moviegue/detail/' + createSlug(props.movie.title);
 
     const addDataInViewDetail = (event) => {
         const element = event.target.parentNode;

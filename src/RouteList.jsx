@@ -1,18 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import ViewDetail from './pages/ViewDetail';
 
 const RouteList = () => {
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/detail/:slug" component={ViewDetail} />
-                {/* <Route exact path="/moviegue" component={Home} /> */}
-                {/* <Route path="/moviegue/detail/:slug" component={ViewDetail} /> */}
-            </Switch>
-        </Router >
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/detail/:slug" element={<ViewDetail />} />
+        </Routes >
     )
 }
 

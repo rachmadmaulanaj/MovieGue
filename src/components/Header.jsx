@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 
 const Header = (props) => {
     const link_detail = '/';
-    // const link_detail = '/moviegue';
     return (
         <nav className="navbar">
             <div className="container">

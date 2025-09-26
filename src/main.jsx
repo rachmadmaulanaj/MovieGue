@@ -6,11 +6,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'font-awesome/css/font-awesome.min.css';
 import { Provider } from 'react-redux';
 import store from './redux/store.jsx';
+import { HashRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<App />
+			<HashRouter>
+				<App />
+			</HashRouter>
 		</Provider>
 	</React.StrictMode>,
 )

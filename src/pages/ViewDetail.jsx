@@ -3,6 +3,7 @@ import store from '../redux/store';
 import Header from '../components/Header';
 import CarouselMedia from '../components/CarouselMedia';
 import NoImageMovie from '../img/no-image-movie.png';
+import NoImageMovieBackdrop from '../img/no-image-movie-backdrop.png';
 import Stars from '../components/Stars';
 import Moment from 'moment';
 import ReactLoading from 'react-loading';
@@ -20,7 +21,7 @@ class ViewDetail extends React.Component {
             isLoading: true
         };
 
-        this.slug = this.props.match.params.slug;
+        // this.slug = this.props.match.params.slug;
         this.movie_id = store.getState().detail.id;
         // this.movie_id = 575264;
 
@@ -107,9 +108,8 @@ class ViewDetail extends React.Component {
         const cast = this.state.cast;
         const images_poster = this.state.images.posters;
         const videos = this.state.videos;
-        // const NoImageMovie = window.location.origin + '/moviegue/assets/no-image-movie.png';
-        const poster = movie.poster_path ? 'https://image.tmdb.org/t/p/w185' + movie.poster_path : NoImageMovie;
-        const backdrop = movie.backdrop_path ? 'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path : NoImageMovie;
+        const poster = movie.poster_path ? 'https://image.tmdb.org/t/p/w342' + movie.poster_path : NoImageMovie;
+        const backdrop = movie.backdrop_path ? 'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path : NoImageMovieBackdrop;
         const movie_release_date = Moment(movie.release_date).format('DD MMM YYYY');
 
         return (
@@ -125,7 +125,7 @@ class ViewDetail extends React.Component {
                             <div className='div-backdrop'>
                                 <div style={{
                                     backgroundImage: `url(${backdrop})`,
-                                    backgroundPosition: 'top',
+                                    backgroundPosition: movie.backdrop_path ? 'top' : 'center',
                                     backgroundRepeat: 'no-repeat',
                                     backgroundSize: 'cover',
                                     height: '100%',
