@@ -5,8 +5,8 @@ import ViewDetail from './pages/ViewDetail';
 const RouteList = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/detail/:slug" element={<ViewDetail />} />
+            <Route path="" element={<Home />} />
+            <Route path="detail/:slug" element={<ViewDetail />} />
         </Routes >
     )
 }
